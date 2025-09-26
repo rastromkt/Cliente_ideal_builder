@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definição do Cliente Ideal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .form-container {
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 antialiased p-4 md:p-8 min-h-screen flex items-center justify-center">
+
+    <div class="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-6 md:p-10 form-container">
+
+        <!-- Header e Logo -->
+        <header class="text-center mb-8">
+            <!-- LOGO INSERIDA: O src e alt foram removidos, mas a tag e o estilo foram mantidos conforme solicitado. -->
+            <img src="" alt="" class="mx-auto rounded-lg w-24 h-24 object-cover mb-4 border-4 border-indigo-500/50">
+            
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Definição do Cliente Ideal</h1>
+            
+            <p class="text-gray-600 mb-4 text-sm">
+                O Cliente Ideal é a pessoa que seu negócio é melhor equipado para servir. Definir esse perfil garante que você atraia clientes que realmente precisam e valorizam sua solução, otimizando tempo e investimento.
+            </p>
+        </header>
+
+        <!-- Formulário para Formspree -->
+        <!-- NOTA IMPORTANTE: A URL 'https://formspree.io/f/mjkakgga' é um placeholder. Você deve substituí-la pela URL do seu endpoint Formspree para que o envio funcione. -->
+        <form id="clientForm" action="https://formspree.io/f/mjkakgga" method="POST" class="space-y-6">
+
+            <!-- Nome do Cliente -->
+            <div class="p-4 bg-indigo-50 rounded-lg">
+                <label for="nome" class="block text-lg font-semibold text-gray-700 mb-2">
+                    Qual é o seu nome?
+                </label>
+                <input type="text" name="Nome do Cliente" id="nome" required placeholder="Seu Nome Completo ou Nome do Negócio"
+                       class="w-full px-4 py-2 border border-indigo-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
+
+            <!-- 1. Definição do Nicho ou Mercado -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="nicho" class="block text-lg font-semibold text-gray-700 mb-2">
+                    1. Qual é o nicho ou mercado que você deseja abordar?
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Esta etapa define o território do seu negócio e o contexto da sua oferta.</p>
+                <textarea name="1_Nicho" id="nicho" rows="2" required placeholder="Ex: Cursos online para professores de ensino fundamental"
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 2. Identificação do Cliente Ideal (Demografia e Rotina) -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="perfil" class="block text-lg font-semibold text-gray-700 mb-2">
+                    2. Quem é o seu Cliente Ideal? (Faixa etária, profissão, localização, rotina)
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Definir o perfil demográfico e de rotina ajuda a criar a linguagem e os canais corretos.</p>
+                <textarea name="2_Perfil_Demografico" id="perfil" rows="3" required placeholder="Ex: Mulheres entre 35-45 anos, empresárias de pequeno porte, na capital de SP, com rotina de 12h de trabalho."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 3. Objetivos e Aspirações -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="objetivos" class="block text-lg font-semibold text-gray-700 mb-2">
+                    3. Quais são os maiores objetivos, sonhos e desejos do seu Cliente Ideal?
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Conhecer a aspiração final do cliente é crucial para posicionar seu produto como a solução ideal.</p>
+                <textarea name="3_Objetivos_Desejos" id="objetivos" rows="3" required placeholder="Ex: Conquistar segurança financeira para se aposentar em 10 anos e ter mais tempo de qualidade com a família."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 4. Valores Fundamentais -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="valores" class="block text-lg font-semibold text-gray-700 mb-2">
+                    4. Quais valores seu Cliente Ideal mais preza? (Liste três valores)
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Os valores influenciam diretamente a decisão de compra e a afinidade com sua marca.</p>
+                <textarea name="4_Valores" id="valores" rows="2" required placeholder="Ex: Integridade, Praticidade, Inovação."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 5. Principais Problemas e Desafios -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="problemas" class="block text-lg font-semibold text-gray-700 mb-2">
+                    5. Liste os principais desafios ou problemas que seu Cliente Ideal enfrenta.
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Identificar a dor principal permite que sua mensagem de marketing se conecte de forma imediata.</p>
+                <textarea name="5_Problemas_Desafios" id="problemas" rows="3" required placeholder="Ex: Não consegue delegar tarefas, se sente sobrecarregado com a gestão de equipes, luta com a falta de previsibilidade financeira."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 6. Tentativas Anteriores -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="tentativas" class="block text-lg font-semibold text-gray-700 mb-2">
+                    6. O que seu Cliente Ideal já tentou fazer para resolver esses problemas?
+                </label>
+                <p class="text-sm text-gray-500 mb-3">Saber o que não funcionou no passado ajuda a posicionar sua solução como a alternativa definitiva.</p>
+                <textarea name="6_Tentativas_Anteriores" id="tentativas" rows="3" required placeholder="Ex: Contratou consultorias genéricas, comprou cursos online que nunca terminou, leu livros de autoajuda sem aplicar o conhecimento."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- 7. Onde Encontrar o Cliente Ideal -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <label for="canais" class="block text-lg font-semibold text-gray-700 mb-2">
+                    7. Onde ele busca informações? (Plataformas, que tipo de perfis/vídeos acompanha?)
+                </label>
+                <p class="text-sm text-gray-500 mb-3">A identificação dos canais é essencial para otimizar seus esforços de distribuição de conteúdo.</p>
+                <textarea name="7_Canais_Consumo" id="canais" rows="3" required placeholder="Ex: LinkedIn (perfis de liderança), YouTube (vídeos sobre gestão de tempo), ouve podcasts sobre finanças, está em grupos privados no Facebook sobre empreendedorismo."
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="pt-4">
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 transform hover:scale-[1.01] ease-in-out">
+                    Enviar Respostas
+                </button>
+                <p class="text-center text-sm text-gray-500 mt-3">Os dados serão enviados diretamente para o seu consultor.</p>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('clientForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const actionUrl = form.action;
+
+            const formData = new FormData(form);
+            const data = {};
+            
+            // Converte FormData para objeto JSON
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Implementando a lógica de retry com backoff exponencial para chamadas de API
+            const maxRetries = 3;
+            let currentRetry = 0;
+
+            async function submitData() {
+                try {
+                    const response = await fetch(actionUrl, {
+                        method: 'POST',
+                        headers: {
+                            // Importante: para o Formspree receber JSON, Content-Type deve ser 'application/json'
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        // Se o envio for bem-sucedido, substitui o formulário pela mensagem de sucesso
+                        form.innerHTML = `
+                            <div class="text-center p-8 bg-green-50 rounded-xl">
+                                <svg class="mx-auto h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <h3 class="mt-2 text-xl font-semibold text-gray-900">Sucesso!</h3>
+                                <p class="mt-1 text-gray-600">Obrigado por preencher o questionário. As respostas foram enviadas com sucesso.</p>
+                                <button onclick="window.location.reload()" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Preencher Novamente
+                                </button>
+                            </div>
+                        `;
+                    } else {
+                        // Se houver erro de servidor, tenta novamente
+                        if (currentRetry < maxRetries) {
+                            currentRetry++;
+                            const delay = Math.pow(2, currentRetry) * 1000; // 2s, 4s, 8s
+                            setTimeout(() => submitData(), delay);
+                        } else {
+                            // Se as tentativas falharem, mostra mensagem de erro
+                            // Substituindo alert() por uma div de mensagem de erro customizada
+                            form.innerHTML = `
+                                <div class="text-center p-8 bg-red-50 rounded-xl">
+                                    <svg class="mx-auto h-12 w-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <h3 class="mt-2 text-xl font-semibold text-gray-900">Erro no Envio</h3>
+                                    <p class="mt-1 text-gray-600">Não foi possível enviar as respostas após ${maxRetries} tentativas. Verifique a URL do Formspree e tente novamente.</p>
+                                    <button onclick="window.location.reload()" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                        Tentar Novamente
+                                    </button>
+                                </div>
+                            `;
+                            console.error('Formspree response not OK after retries:', response);
+                        }
+                    }
+                } catch (error) {
+                    // Se houver erro de rede, tenta novamente
+                    if (currentRetry < maxRetries) {
+                        currentRetry++;
+                        const delay = Math.pow(2, currentRetry) * 1000; // 2s, 4s, 8s
+                        setTimeout(() => submitData(), delay);
+                    } else {
+                        // Se as tentativas falharem, mostra mensagem de erro de rede
+                        form.innerHTML = `
+                            <div class="text-center p-8 bg-red-50 rounded-xl">
+                                <svg class="mx-auto h-12 w-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <h3 class="mt-2 text-xl font-semibold text-gray-900">Erro de Conexão</h3>
+                                <p class="mt-1 text-gray-600">Houve um erro de rede. Por favor, verifique sua conexão e tente novamente mais tarde.</p>
+                                <button onclick="window.location.reload()" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                    Tentar Novamente
+                                </button>
+                            </div>
+                        `;
+                        console.error('Network Error after retries:', error);
+                    }
+                }
+            }
+
+            submitData();
+        });
+
+        // NOTA: Removi as chamadas a 'alert()' e as substituí por mensagens de erro ou sucesso na interface (UI),
+        // conforme as boas práticas para Immersives.
+    </script>
+</body>
+</html>
